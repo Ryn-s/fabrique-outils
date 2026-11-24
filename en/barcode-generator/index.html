@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barcode generator: EAN-13, EAN-8, UPC-A — The Tool Factory</title>
+<meta name="description" content="Free barcode generator: EAN-13, EAN-8 and UPC-A, check digit calculation, high-resolution SVG and PNG export for labels and packaging.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/barcode-generator/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/generateur-code-barres/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/barcode-generator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Barcode generator: EAN-13, EAN-8, UPC-A", "sous_titre": "Type the digits, the check digit is computed, download as SVG (vector) or PNG. Free, no account, no watermark.", "description": "Free barcode generator: EAN-13, EAN-8 and UPC-A, check digit calculation, high-resolution SVG and PNG export for labels and packaging.", "format": "Format", "chiffres": "Digits", "aide_ean13": "EAN-13: 12 digits (the 13th check digit is computed) or 13 digits (the check digit is verified).", "aide_ean8": "EAN-8: 7 digits (the 8th check digit is computed) or 8 digits.", "aide_upca": "UPC-A: 11 digits (the 12th check digit is computed) or 12 digits.", "cle": "Check digit", "cle_fausse": "The check digit you typed is {saisie}; the correct one for these digits is {bonne}.", "longueur": "{n} digits are required.", "svg": "Download SVG", "png": "Download PNG", "aide": "A valid EAN for retail comes from GS1 (a prefix assigned to your company). This tool draws the barcode; it does not assign numbers.", "largeur": "Bar width", "fine": "thin", "normale": "normal", "large": "wide"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/generateur-code-barres/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Barcode generator: EAN-13, EAN-8, UPC-A</h1><p class="sous-titre">Type the digits, the check digit is computed, download as SVG (vector) or PNG. Free, no account, no watermark.</p><span class="requete">For people searching: « free barcode generator ean 13 »</span>
+<div class="carte saisie">
+  <div class="ligne">
+    <div><label for="cb-format">Format</label><select id="cb-format"><option value="ean13">EAN-13</option><option value="ean8">EAN-8</option><option value="upca">UPC-A</option></select></div>
+    <div><label for="cb-largeur">Bar width</label><select id="cb-largeur"><option value="2">thin</option><option value="3" selected>normal</option><option value="4">wide</option></select></div>
+  </div>
+  <label for="cb-chiffres">Digits</label><input id="cb-chiffres" inputmode="numeric" maxlength="13" placeholder="3760123456789">
+  <p class="petit" id="cb-aide"></p>
+  <p id="cb-message"></p>
+  <div class="actions">
+    <button class="bouton" onclick="cbSvg()">Download SVG</button>
+    <button class="bouton secondaire" onclick="cbPng()">Download PNG</button>
+  </div>
+  <p class="petit">A valid EAN for retail comes from GS1 (a prefix assigned to your company). This tool draws the barcode; it does not assign numbers.</p>
+</div>
+<div class="feuille" id="cb-feuille"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('cb-' + id); };
+  var L = ['0001101', '0011001', '0010011', '0111101', '0100011', '0110001', '0101111', '0111011', '0110111', '0001011'];
+  var R = L.map(function (s) { return s.replace(/./g, function (c) { return c === '0' ? '1' : '0'; }); });
+  var G = R.map(function (s) { return s.split('').reverse().join(''); });
+  var PARITE = ['LLLLLL', 'LLGLGG', 'LLGGLG', 'LLGGGL', 'LGLLGG', 'LGGLLG', 'LGGGLL', 'LGLGLG', 'LGLGGL', 'LGGLGL'];
+  var FORMATS = { ean13: { n: 13 }, ean8: { n: 8 }, upca: { n: 12 } };
+  function cle(chiffres) { // chiffres sans la clé ; poids 3 sur le dernier, alternés depuis la droite
+    var s = 0; for (var i = 0; i < chiffres.length; i++) { var d = +chiffres[chiffres.length - 1 - i]; s += d * (i % 2 === 0 ? 3 : 1); }
+    return (10 - s % 10) % 10;
+  }
+  function modules(code, format) { // code complet avec clé
+    var m = '101';
+    if (format === 'ean8') {
+      for (var i = 0; i < 4; i++) m += L[+code[i]]; m += '01010'; for (i = 4; i < 8; i++) m += R[+code[i]];
+    } else {
+      if (format === 'upca') code = '0' + code;
+      var p = PARITE[+code[0]];
+      for (var i = 1; i <= 6; i++) m += (p[i - 1] === 'L' ? L : G)[+code[i]]; m += '01010'; for (i = 7; i <= 12; i++) m += R[+code[i]];
+    }
+    return m + '101';
+  }
+  function dessiner() {
+    var format = el('format').value, n = FORMATS[format].n, w = parseInt(el('largeur').value, 10);
+    el('aide').textContent = T['aide_' + format];
+    var saisie = el('chiffres').value.replace(/\D/g, ''); el('chiffres').value = saisie;
+    var msg = el('message'), feuille = el('feuille'); msg.className = ''; msg.textContent = ''; feuille.innerHTML = '';
+    if (saisie.length !== n && saisie.length !== n - 1) { msg.className = 'petit'; msg.textContent = T.longueur.replace('{n}', (n - 1) + ' / ' + n); return; }
+    var corps = saisie.slice(0, n - 1), k = cle(corps), code = corps + k;
+    if (saisie.length === n && +saisie[n - 1] !== k) { msg.className = 'alerte'; msg.textContent = T.cle_fausse.replace('{saisie}', saisie[n - 1]).replace('{bonne}', k); }
+    else { msg.className = 'petit'; msg.textContent = T.cle + ' : ' + k; }
+    var m = modules(code, format), H = 70, haut = H + 10, texteY = haut + 14, marge = 10 * w;
+    var gardes = format === 'ean8' ? [0, 1, 2, 31, 32, 33, 34, 35, 64, 65, 66] : [0, 1, 2, 45, 46, 47, 48, 49, 92, 93, 94];
+    var bars = '';
+    for (var i = 0; i < m.length; i++) if (m[i] === '1') bars += '<rect x="' + (marge + i * w) + '" y="4" width="' + w + '" height="' + (gardes.indexOf(i) >= 0 ? haut - 4 : H - 4) + '"/>';
+    var W = marge * 2 + m.length * w, fs = 11 * w / 2.5;
+    var texte;
+    if (format === 'ean8') texte = '<text x="' + (marge + 17.5 * w) + '" y="' + texteY + '" text-anchor="middle">' + code.slice(0, 4) + '</text><text x="' + (marge + 49.5 * w) + '" y="' + texteY + '" text-anchor="middle">' + code.slice(4) + '</text>';
+    else { var c13 = format === 'upca' ? '0' + code : code; texte = '<text x="' + (marge - 2 * w) + '" y="' + texteY + '" text-anchor="end">' + (format === 'upca' ? code[0] : c13[0]) + '</text><text x="' + (marge + 24.5 * w) + '" y="' + texteY + '" text-anchor="middle">' + c13.slice(1, 7) + '</text><text x="' + (marge + 70.5 * w) + '" y="' + texteY + '" text-anchor="middle">' + c13.slice(7) + '</text>'; }
+    feuille.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" id="cb-svg" width="' + W + '" height="' + (texteY + 6) + '" viewBox="0 0 ' + W + ' ' + (texteY + 6) + '"><rect width="100%" height="100%" fill="#fff"/><g fill="#000">' + bars + '</g><g font-family="Helvetica,Arial,sans-serif" font-size="' + fs + '" fill="#000">' + texte + '</g></svg>';
+    memoriser('code-barres', { format: format, chiffres: saisie });
+    mesurer('outil_utilise');
+  }
+  var memo = rappeler('code-barres'); if (memo) { el('format').value = memo.format; el('chiffres').value = memo.chiffres; } else el('chiffres').value = '376012345678';
+  ['format', 'chiffres', 'largeur'].forEach(function (id) { el(id).addEventListener('input', dessiner); el(id).addEventListener('change', dessiner); });
+  window.cbSvg = function () { var s = document.getElementById('cb-svg'); if (s) telecharger('code-barres-' + el('chiffres').value + '.svg', new XMLSerializer().serializeToString(s), 'image/svg+xml'); };
+  window.cbPng = function () { var s = document.getElementById('cb-svg'); if (s) svgVersPng(s, 'code-barres-' + el('chiffres').value + '.png', 3); };
+  dessiner();
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free invoice generator — The Tool Factory</title>
+<meta name="description" content="Free online invoice template: seller, client, number, line items with tax by rate, payment terms, late fees, subtotal, tax and total. Print or save as PDF.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/invoice-generator/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/facture-gratuite/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/invoice-generator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Free invoice generator", "sous_titre": "A clean invoice with tax by rate and computed totals. Print or save as PDF. Nothing is sent.", "description": "Free online invoice template: seller, client, number, line items with tax by rate, payment terms, late fees, subtotal, tax and total. Print or save as PDF.", "emetteur": "You (seller)", "nom": "Name or company", "adresse": "Address", "identifiants": "Company number / registration (optional)", "tva_intra": "Tax or VAT number (optional)", "client": "Client", "nom_client": "Client name or company", "adresse_client": "Client address", "facture": "Invoice", "numero": "Number", "date": "Issue date", "echeance": "Due date", "date_prestation": "Date of sale or service", "lignes": "Line items", "designation": "Description", "qte": "Qty", "pu": "Unit price (before tax)", "taux": "Tax %", "ajouter": "Add line", "supprimer": "Remove", "franchise": "No tax applicable (exempt)", "paiement": "Payment terms (method, bank details…)", "penalites": "Late payment interest (% per year)", "total_ht": "Subtotal", "tva": "Tax", "total_ttc": "Total", "net": "Amount due", "mention_penalites": "Late payments incur interest at {taux} % per year. Please pay by the due date.", "mention_franchise": "No tax applicable.", "aide": "Check the mandatory invoice details for your country (identifiers, tax number, numbering). This template is a clean model; your accounting rules may require an official invoicing system.", "doc_titre": "INVOICE", "a_payer_avant": "Due by"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/facture-gratuite/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Free invoice generator</h1><p class="sous-titre">A clean invoice with tax by rate and computed totals. Print or save as PDF. Nothing is sent.</p><span class="requete">For people searching: « template for invoice »</span>
+<div class="carte saisie">
+  <h2>You (seller)</h2>
+  <label for="f-nom">Name or company</label><input id="f-nom">
+  <label for="f-adresse">Address</label><textarea id="f-adresse" rows="2"></textarea>
+  <div class="ligne">
+    <div><label for="f-ident">Company number / registration (optional)</label><input id="f-ident"></div>
+    <div><label for="f-tva-intra">Tax or VAT number (optional)</label><input id="f-tva-intra"></div>
+  </div>
+  <h2>Client</h2>
+  <label for="f-client">Client name or company</label><input id="f-client">
+  <label for="f-adresse-client">Client address</label><textarea id="f-adresse-client" rows="2"></textarea>
+  <h2>Invoice</h2>
+  <div class="ligne">
+    <div><label for="f-numero">Number</label><input id="f-numero"></div>
+    <div><label for="f-date">Issue date</label><input id="f-date" type="date"></div>
+  </div>
+  <div class="ligne">
+    <div><label for="f-prestation">Date of sale or service</label><input id="f-prestation" type="date"></div>
+    <div><label for="f-echeance">Due date</label><input id="f-echeance" type="date"></div>
+  </div>
+  <h2>Line items</h2>
+  <table id="f-lignes"><thead><tr><th>Description</th><th>Qty</th><th>Unit price (before tax)</th><th>Tax %</th><th></th></tr></thead><tbody></tbody></table>
+  <div class="actions" style="margin-top:8px"><button class="bouton secondaire" onclick="fAjouter()">Add line</button></div>
+  <p class="petit"><label style="display:inline;font-weight:normal"><input type="checkbox" id="f-franchise">No tax applicable (exempt)</label></p>
+  <div class="ligne">
+    <div><label for="f-paiement">Payment terms (method, bank details…)</label><textarea id="f-paiement" rows="2"></textarea></div>
+    <div><label for="f-penalites">Late payment interest (% per year)</label><input id="f-penalites" type="number" step="0.1" min="0" value="12"></div>
+  </div>
+  <p class="petit">Check the mandatory invoice details for your country (identifiers, tax number, numbering). This template is a clean model; your accounting rules may require an official invoicing system.</p>
+  <div class="actions"><button class="bouton" onclick="imprimer()">Print / save as PDF</button></div>
+</div>
+<div class="document" id="f-doc"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('f-' + id); };
+  var champs = ['nom', 'adresse', 'ident', 'tva-intra', 'client', 'adresse-client', 'numero', 'date', 'prestation', 'echeance', 'paiement', 'penalites'];
+  var memo = rappeler('facture') || {};
+  champs.forEach(function (c) { if (memo[c] != null) el(c).value = memo[c]; });
+  if (memo.franchise) el('franchise').checked = true;
+  var lignes = memo.lignes || [{ d: '', q: 1, pu: '', t: window.LANG === 'fr' ? 20 : 0 }];
+  if (!el('date').value) el('date').value = aujourdhui();
+  if (!el('echeance').value) { var d = new Date(); d.setDate(d.getDate() + 30); el('echeance').value = d.toISOString().slice(0, 10); }
+  if (!el('numero').value) { var a = new Date(); el('numero').value = (window.LANG === 'fr' ? 'F-' : 'INV-') + a.getFullYear() + '-' + String(a.getMonth() + 1).padStart(2, '0') + '-001'; }
+  var tbody = el('lignes').querySelector('tbody');
+  function dessinerLignes() {
+    tbody.innerHTML = '';
+    lignes.forEach(function (l, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td><input data-i="' + i + '" data-k="d" value="' + echapper(l.d) + '"></td><td><input type="number" step="any" min="0" data-i="' + i + '" data-k="q" value="' + l.q + '" style="width:4.5em"></td>' +
+        '<td><input type="number" step="0.01" min="0" inputmode="decimal" data-i="' + i + '" data-k="pu" value="' + l.pu + '" style="width:7em"></td><td><input type="number" step="0.1" min="0" data-i="' + i + '" data-k="t" value="' + l.t + '" style="width:4.5em"></td>' +
+        '<td><button class="bouton discret" onclick="fSupprimer(' + i + ')" title="' + T.supprimer + '">×</button></td>';
+      tbody.appendChild(tr);
+    });
+  }
+  window.fAjouter = function () { lignes.push({ d: '', q: 1, pu: '', t: lignes.length ? lignes[lignes.length - 1].t : 20 }); dessinerLignes(); rendre(); };
+  window.fSupprimer = function (i) { lignes.splice(i, 1); if (!lignes.length) lignes.push({ d: '', q: 1, pu: '', t: 20 }); dessinerLignes(); rendre(); };
+  function rendre() {
+    tbody.querySelectorAll('input').forEach(function (inp) { lignes[+inp.dataset.i][inp.dataset.k] = inp.value; });
+    var v = {}; champs.forEach(function (c) { v[c] = el(c).value; }); v.franchise = el('franchise').checked; v.lignes = lignes;
+    memoriser('facture', v);
+    var ht = 0, tvaParTaux = {}, rows = '';
+    lignes.forEach(function (l) {
+      var q = parseFloat(l.q) || 0, pu = parseFloat(l.pu) || 0, t = v.franchise ? 0 : (parseFloat(l.t) || 0), m = q * pu;
+      ht += m; tvaParTaux[t] = (tvaParTaux[t] || 0) + m * t / 100;
+      if (l.d || m) rows += '<tr><td>' + echapper(l.d) + '</td><td class="nombre">' + fmtNombre(q, q % 1 ? 2 : 0) + '</td><td class="nombre">' + fmtArgent(pu) + '</td><td class="nombre">' + fmtNombre(t, t % 1 ? 1 : 0) + ' %</td><td class="nombre">' + fmtArgent(m) + '</td></tr>';
+    });
+    var tva = Object.keys(tvaParTaux).reduce(function (s, k) { return s + tvaParTaux[k]; }, 0), ttc = ht + tva;
+    var totaux = '<tr><td colspan="4" class="nombre">' + T.total_ht + '</td><td class="nombre">' + fmtArgent(ht) + '</td></tr>';
+    if (!v.franchise) Object.keys(tvaParTaux).sort().forEach(function (k) { if (+k > 0) totaux += '<tr><td colspan="4" class="nombre">' + T.tva + ' ' + fmtNombre(+k, (+k) % 1 ? 1 : 0) + ' %</td><td class="nombre">' + fmtArgent(tvaParTaux[k]) + '</td></tr>'; });
+    totaux += '<tr class="total"><td colspan="4" class="nombre">' + T.total_ttc + '</td><td class="nombre">' + fmtArgent(ttc) + '</td></tr>';
+    el('doc').innerHTML = '<div class="entete-doc"><div><strong>' + echapper(v.nom) + '</strong><br>' + nl2br(v.adresse) + (v.ident ? '<br>' + echapper(v.ident) : '') + (v['tva-intra'] ? '<br>' + echapper(v['tva-intra']) : '') + '</div>' +
+      '<div style="text-align:right"><h2 style="margin:0">' + T.doc_titre + ' ' + echapper(v.numero) + '</h2>' + T.date + ' : ' + fmtDate(v.date) + (v.prestation ? '<br>' + T.date_prestation + ' : ' + fmtDate(v.prestation) : '') + '<br>' + T.a_payer_avant + ' ' + fmtDate(v.echeance) + '</div></div>' +
+      '<div class="bloc"><strong>' + T.client + '</strong><br>' + echapper(v.client) + '<br>' + nl2br(v['adresse-client']) + '</div>' +
+      '<table><thead><tr><th>' + T.designation + '</th><th class="nombre">' + T.qte + '</th><th class="nombre">' + T.pu + '</th><th class="nombre">' + T.taux + '</th><th class="nombre">' + T.total_ht + '</th></tr></thead><tbody>' + rows + '</tbody><tfoot>' + totaux + '</tfoot></table>' +
+      '<p class="bloc"><strong>' + T.net + ' : ' + fmtArgent(ttc) + '</strong></p>' +
+      (v.franchise ? '<p class="petit">' + T.mention_franchise + '</p>' : '') +
+      (v.paiement ? '<p class="bloc">' + nl2br(v.paiement) + '</p>' : '') +
+      '<p class="petit">' + T.mention_penalites.replace('{taux}', echapper(v.penalites || '0')) + '</p>';
+    if (ht > 0) mesurer('outil_utilise');
+  }
+  dessinerLignes();
+  document.querySelector('.carte.saisie').addEventListener('input', rendre);
+  document.querySelector('.carte.saisie').addEventListener('change', rendre);
+  rendre();
+})();
+
+</script>
+</body>
+</html>

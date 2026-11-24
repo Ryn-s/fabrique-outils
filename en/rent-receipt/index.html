@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free rent receipt — The Tool Factory</title>
+<meta name="description" content="Free rent receipt generator, no account, no software: landlord, tenant, period, rent and charges, then print or save as PDF.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/rent-receipt/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/quittance-de-loyer/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/rent-receipt/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Free rent receipt", "sous_titre": "Fill in, print or save as PDF. Nothing is sent: everything stays in your browser.", "description": "Free rent receipt generator, no account, no software: landlord, tenant, period, rent and charges, then print or save as PDF.", "bailleur": "The landlord", "nom_bailleur": "Full name (or company)", "adresse_bailleur": "Landlord's address", "locataire": "The tenant", "nom_locataire": "Tenant's full name", "logement": "The rented property", "adresse_logement": "Full address of the property", "periode": "Period", "mois": "Month", "annee": "Year", "montants": "Amounts", "loyer": "Rent excluding charges", "charges": "Service charges", "date_paiement": "Date payment was received", "fait_a": "Place", "le": "Date", "aide": "A rent receipt confirms that rent for a given period has been paid in full. For a partial payment, issue a payment acknowledgment instead. Check your local rules for any required wording.", "doc_titre": "RENT RECEIPT", "doc_periode": "Period from {debut} to {fin}", "doc_corps": "I, the undersigned {bailleur}, landlord of the property located at {adresse}, acknowledge receipt from {locataire} of the sum of {total} as rent and charges for the period from {debut} to {fin}, and hereby issue this receipt, without prejudice to my rights.", "doc_detail_loyer": "Rent", "doc_detail_charges": "Service charges", "doc_total": "Total", "doc_paye_le": "Payment received on {date}", "doc_signature": "Landlord's signature", "doc_fait": "Done at {lieu}, on {date}", "mois_liste": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/quittance-de-loyer/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Free rent receipt</h1><p class="sous-titre">Fill in, print or save as PDF. Nothing is sent: everything stays in your browser.</p><span class="requete">For people searching: « rent receipt template »</span>
+<div class="carte saisie">
+  <h2>The landlord</h2>
+  <label for="q-bailleur">Full name (or company)</label><input id="q-bailleur" autocomplete="name">
+  <label for="q-adresse-bailleur">Landlord's address</label><input id="q-adresse-bailleur">
+  <h2>The tenant</h2>
+  <label for="q-locataire">Tenant's full name</label><input id="q-locataire">
+  <h2>The rented property</h2>
+  <label for="q-logement">Full address of the property</label><input id="q-logement">
+  <h2>Period</h2>
+  <div class="ligne">
+    <div><label for="q-mois">Month</label><select id="q-mois"></select></div>
+    <div><label for="q-annee">Year</label><input id="q-annee" type="number" min="2000" max="2100"></div>
+  </div>
+  <h2>Amounts</h2>
+  <div class="ligne">
+    <div><label for="q-loyer">Rent excluding charges</label><input id="q-loyer" type="number" step="0.01" min="0" inputmode="decimal"></div>
+    <div><label for="q-charges">Service charges</label><input id="q-charges" type="number" step="0.01" min="0" inputmode="decimal" value="0"></div>
+  </div>
+  <div class="ligne">
+    <div><label for="q-paiement">Date payment was received</label><input id="q-paiement" type="date"></div>
+    <div><label for="q-lieu">Place</label><input id="q-lieu"></div>
+  </div>
+  <label for="q-date">Date</label><input id="q-date" type="date">
+  <p class="petit">A rent receipt confirms that rent for a given period has been paid in full. For a partial payment, issue a payment acknowledgment instead. Check your local rules for any required wording.</p>
+  <div class="actions">
+    <button class="bouton" onclick="imprimer()">Print / save as PDF</button>
+    <button class="bouton discret" onclick="qReinit()">Start over</button>
+  </div>
+</div>
+<div class="document" id="q-doc"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, ids = ['bailleur', 'adresse-bailleur', 'locataire', 'logement', 'mois', 'annee', 'loyer', 'charges', 'paiement', 'lieu', 'date'];
+  var el = function (id) { return document.getElementById('q-' + id); };
+  var sel = el('mois');
+  T.mois_liste.forEach(function (m, i) { var o = document.createElement('option'); o.value = i; o.textContent = m; sel.appendChild(o); });
+  var auj = new Date(), iso = aujourdhui();
+  var memo = rappeler('quittance') || {};
+  ids.forEach(function (id) { if (memo[id] != null) el(id).value = memo[id]; });
+  if (!el('mois').value) el('mois').value = auj.getMonth();
+  if (!el('annee').value) el('annee').value = auj.getFullYear();
+  if (!el('date').value) el('date').value = iso;
+  if (!el('paiement').value) el('paiement').value = iso;
+
+  function fmtDoc(s, v) { return s.replace(/\{(\w+)\}/g, function (_, k) { return v[k] == null ? '' : v[k]; }); }
+  function rendre() {
+    var v = {}; ids.forEach(function (id) { v[id] = el(id).value; });
+    memoriser('quittance', v);
+    var m = parseInt(v.mois, 10), a = parseInt(v.annee, 10) || auj.getFullYear();
+    var mm = String(m + 1).padStart(2, '0'), dernier = new Date(a, m + 1, 0).getDate(); // dates écrites à la main : pas de décalage de fuseau
+    var debut = a + '-' + mm + '-01', fin = a + '-' + mm + '-' + String(dernier).padStart(2, '0');
+    var loyer = parseFloat(v.loyer) || 0, charges = parseFloat(v.charges) || 0, total = loyer + charges;
+    var d = { bailleur: echapper(v.bailleur) || '…', adresse: echapper(v.logement) || '…', locataire: echapper(v.locataire) || '…',
+      total: '<strong>' + fmtArgent(total, 'EUR') + '</strong>', debut: fmtDate(debut), fin: fmtDate(fin) };
+    var html = '<div class="entete-doc"><div><strong>' + d.bailleur + '</strong><br>' + nl2br(v['adresse-bailleur']) + '</div>' +
+      '<div style="text-align:right">' + d.locataire + '<br>' + nl2br(v.logement) + '</div></div>' +
+      '<h2 style="text-align:center;margin:10px 0 4px">' + T.doc_titre + '</h2>' +
+      '<p style="text-align:center;margin:0 0 18px"><em>' + fmtDoc(T.doc_periode, d) + '</em></p>' +
+      '<p class="bloc">' + fmtDoc(T.doc_corps, d) + '</p>' +
+      '<table style="max-width:420px"><tr><td>' + T.doc_detail_loyer + '</td><td class="nombre">' + fmtArgent(loyer, 'EUR') + '</td></tr>' +
+      '<tr><td>' + T.doc_detail_charges + '</td><td class="nombre">' + fmtArgent(charges, 'EUR') + '</td></tr>' +
+      '<tr class="total"><td>' + T.doc_total + '</td><td class="nombre">' + fmtArgent(total, 'EUR') + '</td></tr></table>' +
+      '<p class="bloc">' + fmtDoc(T.doc_paye_le, { date: fmtDate(v.paiement) }) + '</p>' +
+      '<p class="bloc">' + fmtDoc(T.doc_fait, { lieu: echapper(v.lieu) || '…', date: fmtDate(v.date) }) + '</p>' +
+      '<div class="signature"><div></div><div>' + T.doc_signature + '<br><br><br>____________________</div></div>';
+    el('doc').innerHTML = html;
+  }
+  ids.forEach(function (id) { el(id).addEventListener('input', rendre); el(id).addEventListener('change', rendre); });
+  window.qReinit = function () { ids.forEach(function (id) { el(id).value = ''; }); el('charges').value = '0'; el('mois').value = auj.getMonth(); el('annee').value = auj.getFullYear(); el('date').value = iso; el('paiement').value = iso; rendre(); };
+  rendre();
+})();
+
+</script>
+</body>
+</html>

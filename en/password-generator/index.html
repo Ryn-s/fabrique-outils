@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strong password generator — The Tool Factory</title>
+<meta name="description" content="Free, secure password generator: choose length and characters, or a 4 to 8 word passphrase, with estimated strength in bits. Generated locally, never transmitted.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/password-generator/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/generateur-mot-de-passe/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/password-generator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Strong password generator", "sous_titre": "Random passwords or easy-to-remember passphrases, created in your browser with the cryptographic generator. Nothing is sent or stored.", "description": "Free, secure password generator: choose length and characters, or a 4 to 8 word passphrase, with estimated strength in bits. Generated locally, never transmitted.", "mode": "Type", "aleatoire": "Random password", "phrase": "Passphrase (words)", "longueur": "Length", "minuscules": "lowercase", "majuscules": "uppercase", "chiffres": "digits", "symboles": "symbols", "sans_ambigu": "no ambiguous characters (l, 1, I, O, 0)", "nb_mots": "Number of words", "separateur": "Separator", "majuscule_initiale": "Capitalize each word", "ajouter_chiffre": "Add a digit", "combien": "How many", "generer": "Generate", "force": "Strength: {bits} bits", "faible": "weak", "correct": "okay", "fort": "strong", "tres_fort": "very strong", "aide": "A good password is long, unique for each site, and kept in a password manager. A 5-word random passphrase beats a short, complicated password.", "rien": "Tick at least one character type."};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/generateur-mot-de-passe/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Strong password generator</h1><p class="sous-titre">Random passwords or easy-to-remember passphrases, created in your browser with the cryptographic generator. Nothing is sent or stored.</p><span class="requete">For people searching: « strong password generator »</span>
+<div class="carte saisie">
+  <label for="mp-mode">Type</label>
+  <select id="mp-mode"><option value="aleatoire">Random password</option><option value="phrase">Passphrase (words)</option></select>
+  <div id="mp-p-aleatoire">
+    <label for="mp-longueur">Length : <span id="mp-longueur-v">20</span></label>
+    <input id="mp-longueur" type="range" min="8" max="64" value="20">
+    <div class="petit">
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-min" checked>lowercase</label>
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-maj" checked>uppercase</label>
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-chi" checked>digits</label>
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-sym" checked>symbols</label>
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-amb" checked>no ambiguous characters (l, 1, I, O, 0)</label>
+    </div>
+  </div>
+  <div id="mp-p-phrase" hidden>
+    <div class="ligne">
+      <div><label for="mp-mots">Number of words</label><select id="mp-mots"><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option></select></div>
+      <div><label for="mp-sep">Separator</label><select id="mp-sep"><option value="-">-</option><option value=".">.</option><option value="_">_</option><option value=" ">␣</option><option value="">∅</option></select></div>
+    </div>
+    <div class="petit">
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-cap">Capitalize each word</label>
+      <label style="display:inline;font-weight:normal"><input type="checkbox" id="mp-num">Add a digit</label>
+    </div>
+  </div>
+  <label for="mp-combien">How many</label>
+  <select id="mp-combien"><option>1</option><option>3</option><option selected>5</option><option>10</option></select>
+  <p class="alerte" id="mp-erreur"></p>
+  <div class="actions"><button class="bouton" onclick="mpGenerer()">Generate</button></div>
+  <p class="petit">A good password is long, unique for each site, and kept in a password manager. A 5-word random passphrase beats a short, complicated password.</p>
+</div>
+<div class="carte resultat" id="mp-resultat"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('mp-' + id); };
+  var MOTS = {
+    fr: 'arbre avion bague balle banane bateau bougie bouton branche brioche bulle cabane cactus cadeau cahier camion canard carotte cerise chaise chapeau chaton cheval chemin citron cloche cochon colline corde coton couteau crayon cuisine dauphin dragon drapeau echelle ecole eglise epice etoile fenetre ferme feuille flamme fleur foret fraise fromage fusee galet gant garage gateau girafe glace gorille grenier guitare hamac herbe hibou horloge igloo image jardin jouet jungle jupe kayak lampe lapin lavande licorne lion livre lumiere lune maison manteau marteau melon miroir montagne moulin musique navire neige nuage ocean oiseau olive orage orange ours panda panier papillon parapluie pelle perle piano pierre pirate plage plume poire pomme pont poule prairie prune puits radio raisin renard riviere robot rocher roue ruban sable salade sapin savon serpent soleil souris sucre tambour tapis tasse theiere tigre tomate tortue train tulipe vache vague valise vallee velo verre violon volcan voyage zebre'.split(' '),
+    en: 'acorn anchor apple arrow autumn badger bamboo banana basket beach beacon bottle bridge bubble butter cabin cactus camera candle canyon carrot castle cherry cloud clover coffee comet copper coral cotton cradle crayon cricket dolphin dragon eagle ember engine falcon feather fiddle flame forest fossil garden ginger glacier guitar hammer harbor hazel honey island jacket jasmine jungle kettle kitten ladder lantern lemon lily lobster magnet mango maple marble meadow melon mirror mitten monkey mountain nickel noodle oyster paddle panda parrot pebble pencil pepper piano pillow pirate planet plum pocket pudding puzzle rabbit radio rainbow raven ribbon river rocket saddle salmon sandal shadow silver spider spoon squirrel sunset tiger timber tomato trumpet tulip tunnel turtle velvet violin wagon walnut whale willow window winter yogurt zebra'.split(' ')
+  };
+  var liste = MOTS[window.LANG] || MOTS.en;
+  el('mode').addEventListener('change', function () { el('p-aleatoire').hidden = el('mode').value !== 'aleatoire'; el('p-phrase').hidden = el('mode').value !== 'phrase'; mpGenerer(); });
+  el('longueur').addEventListener('input', function () { el('longueur-v').textContent = el('longueur').value; });
+  function un() {
+    if (el('mode').value === 'phrase') {
+      var n = parseInt(el('mots').value, 10), mots = [];
+      for (var i = 0; i < n; i++) { var m = liste[aleatoire(liste.length)]; if (el('cap').checked) m = m[0].toUpperCase() + m.slice(1); mots.push(m); }
+      if (el('num').checked) mots.splice(aleatoire(mots.length + 1), 0, String(aleatoire(100)));
+      var bits = n * Math.log2(liste.length) + (el('num').checked ? Math.log2(100) : 0);
+      return { mdp: mots.join(el('sep').value), bits: bits };
+    }
+    var jeu = '';
+    if (el('min').checked) jeu += 'abcdefghijklmnopqrstuvwxyz';
+    if (el('maj').checked) jeu += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (el('chi').checked) jeu += '0123456789';
+    if (el('sym').checked) jeu += '!#$%&*+-=?@^_~';
+    if (el('amb').checked) jeu = jeu.replace(/[l1IO0]/g, '');
+    if (!jeu) return null;
+    var L = parseInt(el('longueur').value, 10), s = '';
+    for (var k = 0; k < L; k++) s += jeu[aleatoire(jeu.length)];
+    return { mdp: s, bits: L * Math.log2(jeu.length) };
+  }
+  function niveau(b) { return b < 45 ? [T.faible, '#b45309'] : b < 70 ? [T.correct, '#ca8a04'] : b < 100 ? [T.fort, '#15803d'] : [T.tres_fort, '#0f766e']; }
+  window.mpGenerer = function () {
+    el('erreur').textContent = '';
+    var n = parseInt(el('combien').value, 10), html = '';
+    for (var i = 0; i < n; i++) {
+      var r = un(); if (!r) { el('erreur').textContent = T.rien; el('resultat').innerHTML = ''; return; }
+      var nv = niveau(r.bits);
+      html += '<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--ligne)"><code style="font-size:1.05rem;flex:1;word-break:break-all">' + echapper(r.mdp) + '</code>' +
+        '<span class="petit" style="color:' + nv[1] + '">' + T.force.replace('{bits}', Math.round(r.bits)) + ' · ' + nv[0] + '</span>' +
+        '<button class="bouton secondaire" onclick="copier(this.previousSibling.previousSibling.textContent, this)">' + window.S.copier + '</button></div>';
+    }
+    el('resultat').innerHTML = html; mesurer('outil_termine', el('mode').value);
+  };
+  mpGenerer();
+})();
+
+</script>
+</body>
+</html>

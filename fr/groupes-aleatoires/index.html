@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Générateur de groupes aléatoires — La Fabrique d'outils</title>
+<meta name="description" content="Formez des groupes au hasard gratuitement : collez vos noms, choisissez le nombre de groupes ou la taille, et imprimez. Aussi : tirage au sort d'un nom et ordre de passage aléatoire.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/fr/groupes-aleatoires/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/groupes-aleatoires/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/random-group-generator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="fr";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "Il existe un outil pour ça.", "accroche": "Des outils gratuits, sans compte, sans pub, fabriqués par des agents. Il vous en manque un ? Décrivez-le : il est en ligne demain.", "tous_les_outils": "Tous les outils", "outil": "Outil", "categories": {"documents": "Documents et lettres", "argent": "Argent et calculs", "classe": "Classe et jeux", "securite": "Sécurité", "creation": "Création", "travail": "Travail"}, "repond_a": "Pour ceux qui cherchent :", "demander_titre": "Il vous manque un outil ?", "demander_texte": "Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.", "demander_placeholder": "Par exemple : un outil pour calculer mes indemnités de congés payés", "email_placeholder": "Votre e-mail (facultatif, pour être prévenu)", "envoyer": "Demander cet outil", "demande_merci": "Merci ! Votre demande est notée.", "demande_hors_ligne": "Le site n'est pas encore relié : votre demande est gardée dans ce navigateur et sera envoyée quand la boîte sera ouverte.", "demande_vide": "Écrivez d'abord ce qu'il vous manque.", "imprimer": "Imprimer / enregistrer en PDF", "copier": "Copier le texte", "copie": "Copié !", "telecharger": "Télécharger", "reinitialiser": "Recommencer", "autres_outils": "Autres outils", "mentions": "Mentions légales", "confidentialite": "Données personnelles", "a_propos": "Fabriqué par des agents", "a_propos_texte": "Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).", "autre_langue": "English", "version_du": "Mis à jour le", "page_mentions": "<h1>Mentions légales</h1><p>Éditeur : {societe_nom}, {societe_forme}, siège {societe_siege}, SIREN {societe_siren}. Directeur de la publication : {directeur}.</p><p>Hébergeur : {hebergeur}.</p><p>Les outils sont fournis gratuitement, en l'état, sans garantie. Les documents produits (lettres, quittances, factures) sont des modèles : vérifiez-les avant usage ; ils ne constituent pas un conseil juridique ou comptable.</p>", "page_confidentialite": "<h1>Données personnelles</h1><p>Les outils fonctionnent dans votre navigateur : ce que vous tapez n'est pas envoyé à nos serveurs.</p><p>Nous comptons de façon anonyme les pages vues et les outils utilisés (aucun contenu, aucune adresse IP conservée au-delà du traitement technique).</p><p>Si vous demandez un outil et laissez votre e-mail, il sert uniquement à vous prévenir quand l'outil est en ligne, puis il est supprimé. Pour l'effacer avant : écrivez-nous (adresse dans les mentions légales).</p><p>Pas de cookie publicitaire, pas de revente de données.</p>", "erreur_404": "Cette page n'existe pas (encore). Dites-nous quel outil il vous manque."};window.T={"titre": "Générateur de groupes aléatoires", "sous_titre": "Collez la liste de la classe ou de l'équipe : des groupes équilibrés en un clic, un tirage au sort, ou un ordre de passage.", "description": "Formez des groupes au hasard gratuitement : collez vos noms, choisissez le nombre de groupes ou la taille, et imprimez. Aussi : tirage au sort d'un nom et ordre de passage aléatoire.", "noms": "Les noms (un par ligne)", "mode": "Que voulez-vous ?", "par_nombre": "Un nombre de groupes", "par_taille": "Des groupes d'une taille donnée", "ordre": "Un ordre de passage au hasard", "tirage": "Tirer un nom au sort", "nombre": "Nombre de groupes", "taille": "Taille des groupes", "generer": "Mélanger", "groupe": "Groupe", "tire": "Tiré au sort :", "vide": "Collez d'abord des noms.", "exemple": "Inès\nLucas\nMaëlle\nNoah\nSofia\nGabriel\nLina\nAdam\nChloé\nRaphaël\nJade\nLouis"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../fr/"><span class="logo" aria-hidden="true">⚒</span> La Fabrique d'outils</a>
+  <nav class="nav">
+    <a href="../../fr/">Tous les outils</a>
+    <a href="../../en/random-group-generator/" lang="en" hreflang="en">English</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Générateur de groupes aléatoires</h1><p class="sous-titre">Collez la liste de la classe ou de l'équipe : des groupes équilibrés en un clic, un tirage au sort, ou un ordre de passage.</p><span class="requete">Pour ceux qui cherchent : « générateur de groupe aléatoire »</span>
+<div class="carte saisie">
+  <label for="g-noms">Les noms (un par ligne)</label><textarea id="g-noms" rows="8"></textarea>
+  <label for="g-mode">Que voulez-vous ?</label>
+  <select id="g-mode">
+    <option value="nombre">Un nombre de groupes</option>
+    <option value="taille">Des groupes d'une taille donnée</option>
+    <option value="ordre">Un ordre de passage au hasard</option>
+    <option value="tirage">Tirer un nom au sort</option>
+  </select>
+  <div id="g-p-nombre"><label for="g-nombre">Nombre de groupes</label><input id="g-nombre" type="number" min="2" max="50" value="4"></div>
+  <div id="g-p-taille" hidden><label for="g-taille">Taille des groupes</label><input id="g-taille" type="number" min="1" max="50" value="3"></div>
+  <div class="actions">
+    <button class="bouton" onclick="gGenerer()">Mélanger</button>
+    <button class="bouton secondaire" onclick="copier(gTexte(), this)">Copier le texte</button>
+    <button class="bouton" onclick="imprimer()">Imprimer / enregistrer en PDF</button>
+  </div>
+</div>
+<div class="feuille" id="g-resultat"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Il vous manque un outil ?</h2>
+  <p>Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="Par exemple : un outil pour calculer mes indemnités de congés payés" required></textarea>
+    <input id="demande-email" type="email" placeholder="Votre e-mail (facultatif, pour être prévenu)">
+    <button type="submit" class="bouton">Demander cet outil</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Autres outils</h2><ul><li><a href="../generateur-code-barres/">Générateur de code-barres EAN-13, EAN-8, UPC-A</a></li><li><a href="../facture-gratuite/">Facture gratuite à remplir</a></li><li><a href="../fiche-heures/">Fiche d'heures de travail</a></li><li><a href="../jeux-a-imprimer/">Jeux à imprimer : mots mêlés, labyrinthe, sudoku</a></li><li><a href="../lettre-de-demission/">Lettre de démission : modèle à remplir</a></li><li><a href="../generateur-mot-de-passe/">Générateur de mot de passe fort</a></li><li><a href="../partage-des-frais/">Partage des frais entre amis</a></li><li><a href="../calcul-pourcentage/">Calcul de pourcentage</a></li><li><a href="../quittance-de-loyer/">Quittance de loyer gratuite</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Fabriqué par des agents</strong> — Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).</p>
+  <p><a href="../../fr/mentions-legales/">Mentions légales</a> · <a href="../../fr/confidentialite/">Données personnelles</a> · Mis à jour le 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('g-' + id); }, dernier = [];
+  el('noms').value = rappeler('groupes-noms') || T.exemple;
+  el('mode').addEventListener('change', function () { el('p-nombre').hidden = el('mode').value !== 'nombre'; el('p-taille').hidden = el('mode').value !== 'taille'; gGenerer(); });
+  function noms() { return el('noms').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean); }
+  window.gGenerer = function () {
+    memoriser('groupes-noms', el('noms').value);
+    var l = melanger(noms()), mode = el('mode').value, r = el('resultat');
+    if (!l.length) { r.innerHTML = '<p class="petit">' + T.vide + '</p>'; dernier = []; return; }
+    var groupes = [];
+    if (mode === 'tirage') { dernier = [[l[0]]]; r.innerHTML = '<p class="grand-chiffre" style="text-align:center;color:#111">' + T.tire + ' ' + echapper(l[0]) + '</p>'; mesurer('outil_termine', mode); return; }
+    if (mode === 'ordre') { dernier = [l]; r.innerHTML = '<ol style="color:#111;columns:2">' + l.map(function (n) { return '<li>' + echapper(n) + '</li>'; }).join('') + '</ol>'; mesurer('outil_termine', mode); return; }
+    var n = mode === 'nombre' ? Math.max(1, Math.min(l.length, parseInt(el('nombre').value, 10) || 1)) : Math.max(1, Math.ceil(l.length / Math.max(1, parseInt(el('taille').value, 10) || 1)));
+    for (var i = 0; i < n; i++) groupes.push([]);
+    l.forEach(function (nom, i) { groupes[i % n].push(nom); });
+    dernier = groupes;
+    r.innerHTML = '<div class="grille" style="color:#111">' + groupes.map(function (g, i) { return '<div style="border:1px solid #ccc;border-radius:10px;padding:10px"><strong>' + T.groupe + ' ' + (i + 1) + '</strong><ul style="margin:6px 0 0;padding-left:18px">' + g.map(function (x) { return '<li>' + echapper(x) + '</li>'; }).join('') + '</ul></div>'; }).join('') + '</div>';
+    mesurer('outil_termine', mode);
+  };
+  window.gTexte = function () { return dernier.map(function (g, i) { return (dernier.length > 1 ? T.groupe + ' ' + (i + 1) + ' : ' : '') + g.join(', '); }).join('\n'); };
+  gGenerer();
+})();
+
+</script>
+</body>
+</html>

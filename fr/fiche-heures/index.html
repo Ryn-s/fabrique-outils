@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche d'heures de travail — La Fabrique d'outils</title>
+<meta name="description" content="Calculez vos heures de travail de la semaine gratuitement : heures par jour, pauses, total, heures supplémentaires au-delà du seuil, estimation de salaire, export CSV et impression.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/fr/fiche-heures/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/fiche-heures/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/timesheet/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="fr";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "Il existe un outil pour ça.", "accroche": "Des outils gratuits, sans compte, sans pub, fabriqués par des agents. Il vous en manque un ? Décrivez-le : il est en ligne demain.", "tous_les_outils": "Tous les outils", "outil": "Outil", "categories": {"documents": "Documents et lettres", "argent": "Argent et calculs", "classe": "Classe et jeux", "securite": "Sécurité", "creation": "Création", "travail": "Travail"}, "repond_a": "Pour ceux qui cherchent :", "demander_titre": "Il vous manque un outil ?", "demander_texte": "Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.", "demander_placeholder": "Par exemple : un outil pour calculer mes indemnités de congés payés", "email_placeholder": "Votre e-mail (facultatif, pour être prévenu)", "envoyer": "Demander cet outil", "demande_merci": "Merci ! Votre demande est notée.", "demande_hors_ligne": "Le site n'est pas encore relié : votre demande est gardée dans ce navigateur et sera envoyée quand la boîte sera ouverte.", "demande_vide": "Écrivez d'abord ce qu'il vous manque.", "imprimer": "Imprimer / enregistrer en PDF", "copier": "Copier le texte", "copie": "Copié !", "telecharger": "Télécharger", "reinitialiser": "Recommencer", "autres_outils": "Autres outils", "mentions": "Mentions légales", "confidentialite": "Données personnelles", "a_propos": "Fabriqué par des agents", "a_propos_texte": "Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).", "autre_langue": "English", "version_du": "Mis à jour le", "page_mentions": "<h1>Mentions légales</h1><p>Éditeur : {societe_nom}, {societe_forme}, siège {societe_siege}, SIREN {societe_siren}. Directeur de la publication : {directeur}.</p><p>Hébergeur : {hebergeur}.</p><p>Les outils sont fournis gratuitement, en l'état, sans garantie. Les documents produits (lettres, quittances, factures) sont des modèles : vérifiez-les avant usage ; ils ne constituent pas un conseil juridique ou comptable.</p>", "page_confidentialite": "<h1>Données personnelles</h1><p>Les outils fonctionnent dans votre navigateur : ce que vous tapez n'est pas envoyé à nos serveurs.</p><p>Nous comptons de façon anonyme les pages vues et les outils utilisés (aucun contenu, aucune adresse IP conservée au-delà du traitement technique).</p><p>Si vous demandez un outil et laissez votre e-mail, il sert uniquement à vous prévenir quand l'outil est en ligne, puis il est supprimé. Pour l'effacer avant : écrivez-nous (adresse dans les mentions légales).</p><p>Pas de cookie publicitaire, pas de revente de données.</p>", "erreur_404": "Cette page n'existe pas (encore). Dites-nous quel outil il vous manque."};window.T={"titre": "Fiche d'heures de travail", "sous_titre": "Notez vos heures de la semaine : total, heures supplémentaires, estimation de paie. Gratuit, sans compte, gardé dans votre navigateur.", "description": "Calculez vos heures de travail de la semaine gratuitement : heures par jour, pauses, total, heures supplémentaires au-delà du seuil, estimation de salaire, export CSV et impression.", "semaine_du": "Semaine du (lundi)", "seuil": "Seuil hebdomadaire (h)", "taux": "Taux horaire (facultatif, €)", "majoration": "Majoration des heures sup (%)", "jour": "Jour", "debut": "Début", "fin": "Fin", "pause": "Pause (min)", "heures": "Heures", "total_semaine": "Total de la semaine", "heures_sup": "Heures supplémentaires", "paie": "Estimation brute", "jours": ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"], "export": "Exporter en CSV", "aide": "Les heures sup sont comptées au-delà du seuil hebdomadaire (35 h en France par défaut). L'estimation ne remplace pas votre bulletin de paie : les règles de majoration dépendent de votre convention collective.", "doc_titre": "Fiche d'heures — semaine du {date}", "nom": "Votre nom (pour l'impression)"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../fr/"><span class="logo" aria-hidden="true">⚒</span> La Fabrique d'outils</a>
+  <nav class="nav">
+    <a href="../../fr/">Tous les outils</a>
+    <a href="../../en/timesheet/" lang="en" hreflang="en">English</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Fiche d'heures de travail</h1><p class="sous-titre">Notez vos heures de la semaine : total, heures supplémentaires, estimation de paie. Gratuit, sans compte, gardé dans votre navigateur.</p><span class="requete">Pour ceux qui cherchent : « application pour noter ses heures de travail gratuit »</span>
+<div class="carte saisie">
+  <div class="ligne">
+    <div><label for="h-nom">Votre nom (pour l'impression)</label><input id="h-nom"></div>
+    <div><label for="h-semaine">Semaine du (lundi)</label><input id="h-semaine" type="date"></div>
+  </div>
+  <div class="ligne">
+    <div><label for="h-seuil">Seuil hebdomadaire (h)</label><input id="h-seuil" type="number" step="0.5" min="0"></div>
+    <div><label for="h-majoration">Majoration des heures sup (%)</label><input id="h-majoration" type="number" step="1" min="0" value="25"></div>
+  </div>
+  <label for="h-taux">Taux horaire (facultatif, €)</label><input id="h-taux" type="number" step="0.01" min="0" inputmode="decimal">
+  <table id="h-table" style="margin-top:14px">
+    <thead><tr><th>Jour</th><th>Début</th><th>Fin</th><th>Pause (min)</th><th class="nombre">Heures</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <p class="petit">Les heures sup sont comptées au-delà du seuil hebdomadaire (35 h en France par défaut). L'estimation ne remplace pas votre bulletin de paie : les règles de majoration dépendent de votre convention collective.</p>
+  <div class="actions">
+    <button class="bouton" onclick="imprimer()">Imprimer / enregistrer en PDF</button>
+    <button class="bouton secondaire" onclick="hExport()">Exporter en CSV</button>
+    <button class="bouton discret" onclick="hReinit()">Recommencer</button>
+  </div>
+</div>
+<div class="document" id="h-doc"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Il vous manque un outil ?</h2>
+  <p>Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="Par exemple : un outil pour calculer mes indemnités de congés payés" required></textarea>
+    <input id="demande-email" type="email" placeholder="Votre e-mail (facultatif, pour être prévenu)">
+    <button type="submit" class="bouton">Demander cet outil</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Autres outils</h2><ul><li><a href="../generateur-code-barres/">Générateur de code-barres EAN-13, EAN-8, UPC-A</a></li><li><a href="../facture-gratuite/">Facture gratuite à remplir</a></li><li><a href="../groupes-aleatoires/">Générateur de groupes aléatoires</a></li><li><a href="../jeux-a-imprimer/">Jeux à imprimer : mots mêlés, labyrinthe, sudoku</a></li><li><a href="../lettre-de-demission/">Lettre de démission : modèle à remplir</a></li><li><a href="../generateur-mot-de-passe/">Générateur de mot de passe fort</a></li><li><a href="../partage-des-frais/">Partage des frais entre amis</a></li><li><a href="../calcul-pourcentage/">Calcul de pourcentage</a></li><li><a href="../quittance-de-loyer/">Quittance de loyer gratuite</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Fabriqué par des agents</strong> — Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).</p>
+  <p><a href="../../fr/mentions-legales/">Mentions légales</a> · <a href="../../fr/confidentialite/">Données personnelles</a> · Mis à jour le 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('h-' + id); };
+  var tbody = el('table').querySelector('tbody');
+  var memo = rappeler('fiche-heures') || {};
+  // Lundi de la semaine courante
+  var d = new Date(); var lundi = new Date(d); lundi.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+  el('semaine').value = memo.semaine || lundi.toISOString().slice(0, 10);
+  el('seuil').value = memo.seuil != null ? memo.seuil : (window.LANG === 'fr' ? 35 : 40);
+  el('majoration').value = memo.majoration != null ? memo.majoration : 25;
+  el('taux').value = memo.taux || '';
+  el('nom').value = memo.nom || '';
+  var lignes = memo.lignes || T.jours.map(function () { return { debut: '', fin: '', pause: 0 }; });
+  T.jours.forEach(function (j, i) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + j + '</td><td><input type="time" data-i="' + i + '" data-k="debut" value="' + (lignes[i].debut || '') + '"></td>' +
+      '<td><input type="time" data-i="' + i + '" data-k="fin" value="' + (lignes[i].fin || '') + '"></td>' +
+      '<td><input type="number" min="0" step="5" data-i="' + i + '" data-k="pause" value="' + (lignes[i].pause || 0) + '" style="width:5.5em"></td>' +
+      '<td class="nombre" id="h-j' + i + '">–</td>';
+    tbody.appendChild(tr);
+  });
+  function minutes(h) { if (!h) return null; var p = h.split(':'); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+  function heuresJour(l) {
+    var a = minutes(l.debut), b = minutes(l.fin); if (a == null || b == null) return 0;
+    if (b < a) b += 24 * 60; // nuit
+    return Math.max(0, (b - a - (parseFloat(l.pause) || 0)) / 60);
+  }
+  function fmtH(h) { var hh = Math.floor(h), mm = Math.round((h - hh) * 60); if (mm === 60) { hh++; mm = 0; } return hh + ' h ' + (mm < 10 ? '0' : '') + mm; }
+  function calc() {
+    tbody.querySelectorAll('input').forEach(function (inp) { lignes[+inp.dataset.i][inp.dataset.k] = inp.value; });
+    var total = 0;
+    lignes.forEach(function (l, i) { var h = heuresJour(l); total += h; el('j' + i).textContent = h ? fmtH(h) : '–'; });
+    var seuil = parseFloat(el('seuil').value) || 0, maj = parseFloat(el('majoration').value) || 0, taux = parseFloat(el('taux').value) || 0;
+    var sup = Math.max(0, total - seuil), normales = total - sup;
+    var paie = taux ? normales * taux + sup * taux * (1 + maj / 100) : null;
+    memoriser('fiche-heures', { semaine: el('semaine').value, seuil: el('seuil').value, majoration: el('majoration').value, taux: el('taux').value, nom: el('nom').value, lignes: lignes });
+    var semaine = el('semaine').value;
+    var html = '<h2>' + T.doc_titre.replace('{date}', fmtDate(semaine)) + '</h2>' + (el('nom').value ? '<p>' + echapper(el('nom').value) + '</p>' : '') +
+      '<table><tr><th>' + T.jour + '</th><th>' + T.debut + '</th><th>' + T.fin + '</th><th>' + T.pause + '</th><th class="nombre">' + T.heures + '</th></tr>';
+    lignes.forEach(function (l, i) {
+      var dj = new Date(semaine + 'T12:00:00'); dj.setDate(dj.getDate() + i);
+      html += '<tr><td>' + T.jours[i] + ' ' + dj.getDate() + '</td><td>' + (l.debut || '') + '</td><td>' + (l.fin || '') + '</td><td>' + (l.pause || 0) + '</td><td class="nombre">' + (heuresJour(l) ? fmtH(heuresJour(l)) : '') + '</td></tr>';
+    });
+    html += '<tr class="total"><td colspan="4">' + T.total_semaine + '</td><td class="nombre">' + fmtH(total) + '</td></tr>' +
+      '<tr><td colspan="4">' + T.heures_sup + ' (&gt; ' + seuil + ' h)</td><td class="nombre">' + fmtH(sup) + '</td></tr>' +
+      (paie != null ? '<tr><td colspan="4">' + T.paie + '</td><td class="nombre">' + fmtArgent(paie) + '</td></tr>' : '') + '</table>';
+    el('doc').innerHTML = html;
+    if (total > 0) mesurer('outil_utilise');
+  }
+  document.querySelectorAll('#h-table input, #h-seuil, #h-majoration, #h-taux, #h-semaine, #h-nom').forEach(function (i) { i.addEventListener('input', calc); i.addEventListener('change', calc); });
+  window.hExport = function () {
+    var csv = [T.jour, T.debut, T.fin, T.pause, T.heures].join(';') + '\n' + lignes.map(function (l, i) { return [T.jours[i], l.debut, l.fin, l.pause || 0, heuresJour(l).toFixed(2)].join(';'); }).join('\n');
+    telecharger((window.LANG === 'fr' ? 'fiche-heures-' : 'timesheet-') + el('semaine').value + '.csv', csv, 'text/csv;charset=utf-8');
+  };
+  window.hReinit = function () { lignes = T.jours.map(function () { return { debut: '', fin: '', pause: 0 }; }); tbody.querySelectorAll('input').forEach(function (i) { i.value = i.type === 'number' ? 0 : ''; }); calc(); };
+  calc();
+})();
+
+</script>
+</body>
+</html>

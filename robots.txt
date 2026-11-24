@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ryn-s.github.io/fabrique-outils/sitemap.xml

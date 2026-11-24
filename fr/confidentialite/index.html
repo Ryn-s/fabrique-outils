@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Données personnelles</title>
+<meta name="description" content="Données personnelles">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/fr/confidentialite/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/confidentialite/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/confidentialite/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="fr";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "Il existe un outil pour ça.", "accroche": "Des outils gratuits, sans compte, sans pub, fabriqués par des agents. Il vous en manque un ? Décrivez-le : il est en ligne demain.", "tous_les_outils": "Tous les outils", "outil": "Outil", "categories": {"documents": "Documents et lettres", "argent": "Argent et calculs", "classe": "Classe et jeux", "securite": "Sécurité", "creation": "Création", "travail": "Travail"}, "repond_a": "Pour ceux qui cherchent :", "demander_titre": "Il vous manque un outil ?", "demander_texte": "Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.", "demander_placeholder": "Par exemple : un outil pour calculer mes indemnités de congés payés", "email_placeholder": "Votre e-mail (facultatif, pour être prévenu)", "envoyer": "Demander cet outil", "demande_merci": "Merci ! Votre demande est notée.", "demande_hors_ligne": "Le site n'est pas encore relié : votre demande est gardée dans ce navigateur et sera envoyée quand la boîte sera ouverte.", "demande_vide": "Écrivez d'abord ce qu'il vous manque.", "imprimer": "Imprimer / enregistrer en PDF", "copier": "Copier le texte", "copie": "Copié !", "telecharger": "Télécharger", "reinitialiser": "Recommencer", "autres_outils": "Autres outils", "mentions": "Mentions légales", "confidentialite": "Données personnelles", "a_propos": "Fabriqué par des agents", "a_propos_texte": "Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).", "autre_langue": "English", "version_du": "Mis à jour le", "page_mentions": "<h1>Mentions légales</h1><p>Éditeur : {societe_nom}, {societe_forme}, siège {societe_siege}, SIREN {societe_siren}. Directeur de la publication : {directeur}.</p><p>Hébergeur : {hebergeur}.</p><p>Les outils sont fournis gratuitement, en l'état, sans garantie. Les documents produits (lettres, quittances, factures) sont des modèles : vérifiez-les avant usage ; ils ne constituent pas un conseil juridique ou comptable.</p>", "page_confidentialite": "<h1>Données personnelles</h1><p>Les outils fonctionnent dans votre navigateur : ce que vous tapez n'est pas envoyé à nos serveurs.</p><p>Nous comptons de façon anonyme les pages vues et les outils utilisés (aucun contenu, aucune adresse IP conservée au-delà du traitement technique).</p><p>Si vous demandez un outil et laissez votre e-mail, il sert uniquement à vous prévenir quand l'outil est en ligne, puis il est supprimé. Pour l'effacer avant : écrivez-nous (adresse dans les mentions légales).</p><p>Pas de cookie publicitaire, pas de revente de données.</p>", "erreur_404": "Cette page n'existe pas (encore). Dites-nous quel outil il vous manque."};window.T={};</script>
+</head>
+<body class="">
+<header class="entete">
+  <a class="marque" href="../../fr/"><span class="logo" aria-hidden="true">⚒</span> La Fabrique d'outils</a>
+  <nav class="nav">
+    <a href="../../fr/">Tous les outils</a>
+    <a href="../../en/confidentialite/" lang="en" hreflang="en">English</a>
+  </nav>
+</header>
+<main class="principal">
+<h1>Données personnelles</h1><p>Les outils fonctionnent dans votre navigateur : ce que vous tapez n'est pas envoyé à nos serveurs.</p><p>Nous comptons de façon anonyme les pages vues et les outils utilisés (aucun contenu, aucune adresse IP conservée au-delà du traitement technique).</p><p>Si vous demandez un outil et laissez votre e-mail, il sert uniquement à vous prévenir quand l'outil est en ligne, puis il est supprimé. Pour l'effacer avant : écrivez-nous (adresse dans les mentions légales).</p><p>Pas de cookie publicitaire, pas de revente de données.</p>
+</main>
+<section class="demander" id="demander">
+  <h2>Il vous manque un outil ?</h2>
+  <p>Décrivez-le en une phrase. Les agents de la fabrique en construisent un par jour, et vous prévenons s'il est en ligne.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="Par exemple : un outil pour calculer mes indemnités de congés payés" required></textarea>
+    <input id="demande-email" type="email" placeholder="Votre e-mail (facultatif, pour être prévenu)">
+    <button type="submit" class="bouton">Demander cet outil</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+
+<footer class="pied">
+  <p><strong>Fabriqué par des agents</strong> — Ce site est fabriqué et entretenu par une équipe d'agents IA pilotée par une personne. Chaque outil marche dans votre navigateur ; rien de ce que vous tapez n'est envoyé à un serveur, sauf les demandes d'outils et quelques compteurs anonymes (nombre d'utilisations, pas de contenu).</p>
+  <p><a href="../../fr/mentions-legales/">Mentions légales</a> · <a href="../../fr/confidentialite/">Données personnelles</a> · Mis à jour le 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* La Fabrique d'outils — une seule feuille de style, téléphone d'abord. */
+:root{
+  --fond:#f7f7f5;--carte:#ffffff;--texte:#1c1c1a;--texte2:#5a5a55;--ligne:#e3e3de;
+  --accent:#0f766e;--accent2:#0b5d57;--accent-doux:#e6f4f2;--alerte:#b45309;--ok:#15803d;
+  --rayon:12px;--ombre:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.04);
+  --police:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--fond:#121313;--carte:#1b1d1d;--texte:#ecece8;--texte2:#a7a7a0;--ligne:#2c2f2f;--accent:#2dd4bf;--accent2:#5eead4;--accent-doux:#13302d;--ombre:none}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--texte);font:16px/1.55 var(--police)}
+a{color:var(--accent)}
+h1{font-size:1.75rem;line-height:1.2;margin:.2em 0 .4em;letter-spacing:-.01em}
+h2{font-size:1.25rem;margin:1.4em 0 .5em}
+h3{font-size:1.05rem;margin:1.2em 0 .4em}
+p{margin:.5em 0}
+small,.petit{color:var(--texte2);font-size:.9rem}
+code{font-family:var(--mono);font-size:.92em;background:var(--accent-doux);padding:.1em .35em;border-radius:6px}
+
+.entete{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;max-width:1100px;margin:0 auto}
+.marque{font-weight:700;text-decoration:none;color:var(--texte);font-size:1.05rem;display:flex;align-items:center;gap:8px}
+.logo{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--accent);color:#fff;font-size:17px}
+.nav{display:flex;gap:14px;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--texte2)}
+.nav a:hover{color:var(--accent)}
+
+.principal{max-width:760px;margin:0 auto;padding:8px 16px 32px}
+.accueil .principal{max-width:1100px}
+.sous-titre{color:var(--texte2);font-size:1.05rem;margin-top:-.2em}
+.requete{display:inline-block;margin:.6em 0 1em;padding:.35em .7em;border-radius:999px;background:var(--accent-doux);color:var(--accent2);font-size:.85rem}
+
+.carte{background:var(--carte);border:1px solid var(--ligne);border-radius:var(--rayon);box-shadow:var(--ombre);padding:18px}
+.carte+.carte{margin-top:14px}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tuile{display:block;text-decoration:none;color:inherit;background:var(--carte);border:1px solid var(--ligne);border-radius:var(--rayon);padding:16px;box-shadow:var(--ombre);transition:transform .12s,border-color .12s}
+.tuile:hover{transform:translateY(-2px);border-color:var(--accent)}
+.tuile h3{margin:0 0 .3em;font-size:1.02rem}
+.tuile p{margin:0;color:var(--texte2);font-size:.92rem}
+.heros{padding:36px 0 22px}
+.heros h1{font-size:2.2rem}
+.heros p{font-size:1.1rem;color:var(--texte2);max-width:640px}
+.categorie{margin-top:28px}
+
+label{display:block;font-weight:600;font-size:.92rem;margin:12px 0 4px}
+input,select,textarea{width:100%;font:inherit;color:inherit;background:var(--carte);border:1px solid var(--ligne);border-radius:9px;padding:10px 12px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+input[type=checkbox],input[type=radio]{width:auto;margin-right:6px}
+.ligne{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.ligne{grid-template-columns:1fr}}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.bouton{font:inherit;font-weight:600;border:0;border-radius:9px;padding:11px 16px;background:var(--accent);color:#fff;cursor:pointer}
+.bouton:hover{background:var(--accent2)}
+.bouton.secondaire{background:var(--accent-doux);color:var(--accent2)}
+.bouton.discret{background:transparent;color:var(--texte2);border:1px solid var(--ligne)}
+.bouton:disabled{opacity:.5;cursor:default}
+.retour{min-height:1.4em;color:var(--ok)}
+.alerte{color:var(--alerte)}
+.resultat{margin-top:18px}
+.grand-chiffre{font-size:2rem;font-weight:700;letter-spacing:-.02em}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--ligne);vertical-align:top}
+th{font-weight:600;color:var(--texte2);font-size:.85rem;text-transform:uppercase;letter-spacing:.03em}
+td.nombre,th.nombre{text-align:right;font-variant-numeric:tabular-nums}
+.pre{font-family:var(--mono);font-size:.9rem;white-space:pre-wrap;word-break:break-word;background:var(--accent-doux);padding:12px;border-radius:9px}
+
+/* Le document imprimable (quittance, lettre, facture, fiche) */
+.document{background:#fff;color:#111;border:1px solid var(--ligne);border-radius:var(--rayon);padding:28px 30px;margin-top:18px;font:15px/1.5 Georgia,"Times New Roman",serif;box-shadow:var(--ombre)}
+.document h1,.document h2{font-family:var(--police)}
+.document .entete-doc{display:flex;justify-content:space-between;gap:20px;margin-bottom:22px;font-size:.95em}
+.document .bloc{margin:14px 0}
+.document table{font-size:.95em}
+.document .total{font-weight:700}
+.document .signature{margin-top:40px;display:flex;justify-content:space-between;gap:20px}
+.feuille{background:#fff;color:#111;border:1px solid var(--ligne);border-radius:var(--rayon);padding:20px;margin-top:18px;overflow:auto}
+.feuille svg{max-width:100%;height:auto;display:block;margin:0 auto}
+
+.demander{max-width:760px;margin:16px auto 0;padding:22px 16px;border-top:1px solid var(--ligne)}
+.demander h2{margin-top:0}
+.demander textarea,.demander input{margin-bottom:10px}
+.autres{max-width:760px;margin:0 auto;padding:10px 16px 24px}
+.autres ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.autres li a{display:inline-block;padding:6px 11px;border:1px solid var(--ligne);border-radius:999px;text-decoration:none;color:var(--texte2);font-size:.9rem;background:var(--carte)}
+.autres li a:hover{border-color:var(--accent);color:var(--accent)}
+.pied{max-width:760px;margin:0 auto;padding:18px 16px 40px;color:var(--texte2);font-size:.88rem;border-top:1px solid var(--ligne)}
+
+/* Grilles de jeux */
+.grille-jeu{border-collapse:collapse;margin:0 auto;font-family:var(--mono)}
+.grille-jeu td{border:1px solid #333;width:1.9em;height:1.9em;text-align:center;padding:0;font-size:1.05rem;color:#111;background:#fff}
+.grille-jeu.sudoku td:nth-child(3n){border-right:2px solid #000}
+.grille-jeu.sudoku tr:nth-child(3n) td{border-bottom:2px solid #000}
+.grille-jeu.sudoku td:first-child{border-left:2px solid #000}
+.grille-jeu.sudoku tr:first-child td{border-top:2px solid #000}
+.mots-liste{columns:3;font-size:.95rem;margin-top:10px}
+@media (max-width:560px){.mots-liste{columns:2}}
+.labyrinthe{display:block;margin:0 auto;max-width:100%}
+
+@media print{
+  body{background:#fff;color:#000;font-size:12pt}
+  .entete,.nav,.demander,.autres,.pied,.actions,.carte.saisie,.ne-pas-imprimer,.requete,.sous-titre,h1.titre-outil{display:none !important}
+  .principal{max-width:none;padding:0}
+  .document,.feuille{border:0;box-shadow:none;padding:0;margin:0;border-radius:0}
+  .document{font-size:12pt}
+  a{color:#000;text-decoration:none}
+  @page{margin:18mm}
+}
+
+@media (max-width:480px){.entete{padding:10px 12px}.marque{font-size:.98rem}.nav{gap:10px;font-size:.88rem;white-space:nowrap}}

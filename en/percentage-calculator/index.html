@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percentage calculator — The Tool Factory</title>
+<meta name="description" content="Free percentage calculator: what is X % of Y, what percent is X of Y, increase or decrease by X %, percent change between two numbers, price after discount, before and after tax.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/percentage-calculator/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/calcul-pourcentage/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/percentage-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Percentage calculator", "sous_titre": "Percent of a number, share in %, increase or decrease, change between two values, discount, sales tax. Results update as you type.", "description": "Free percentage calculator: what is X % of Y, what percent is X of Y, increase or decrease by X %, percent change between two numbers, price after discount, before and after tax.", "m1": "What is {a} % of {b}?", "m2": "{a} is what % of {b}?", "m3": "{b} increased or decreased by {a} %", "m4": "Change from {a} to {b}, in %", "m5": "Price after discount: {b} with {a} % off", "m6": "Before ↔ after tax at {a} %: {b}", "resultat": "Result", "hausse": "After increase", "baisse": "After decrease", "ht": "Before tax", "ttc": "After tax", "tva": "of which tax", "economie": "You save", "formule": "Formula", "f1": "{b} × {a} ÷ 100", "f2": "{a} ÷ {b} × 100", "f3": "{b} × (1 ± {a} ÷ 100)", "f4": "({b} − {a}) ÷ {a} × 100", "f5": "{b} × (1 − {a} ÷ 100)", "f6": "after = before × (1 + {a} ÷ 100); before = after ÷ (1 + {a} ÷ 100)", "si_ht": "If {b} is the price before tax", "si_ttc": "If {b} is the price after tax"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/calcul-pourcentage/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Percentage calculator</h1><p class="sous-titre">Percent of a number, share in %, increase or decrease, change between two values, discount, sales tax. Results update as you type.</p><span class="requete">For people searching: « percentage calculator »</span>
+<div id="pc-liste"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, liste = document.getElementById('pc-liste');
+  var modes = [
+    { k: 'm1', a: 20, b: 150, f: 'f1', calc: function (a, b) { return [[T.resultat, fmtNombre(b * a / 100)]]; } },
+    { k: 'm2', a: 30, b: 150, f: 'f2', calc: function (a, b) { return b ? [[T.resultat, fmtNombre(a / b * 100) + ' %']] : []; } },
+    { k: 'm3', a: 10, b: 200, f: 'f3', calc: function (a, b) { return [[T.hausse, fmtNombre(b * (1 + a / 100))], [T.baisse, fmtNombre(b * (1 - a / 100))]]; } },
+    { k: 'm4', a: 120, b: 150, f: 'f4', calc: function (a, b) { return a ? [[T.resultat, (b >= a ? '+' : '') + fmtNombre((b - a) / a * 100) + ' %']] : []; } },
+    { k: 'm5', a: 30, b: 89.99, f: 'f5', calc: function (a, b) { return [[T.resultat, fmtArgent(b * (1 - a / 100))], [T.economie, fmtArgent(b * a / 100)]]; } },
+    { k: 'm6', a: 20, b: 100, f: 'f6', calc: function (a, b) { var t = 1 + a / 100; return [[T.si_ht.replace('{b}', fmtArgent(b)) + ' → ' + T.ttc, fmtArgent(b * t) + ' (' + T.tva + ' ' + fmtArgent(b * t - b) + ')'], [T.si_ttc.replace('{b}', fmtArgent(b)) + ' → ' + T.ht, fmtArgent(b / t) + ' (' + T.tva + ' ' + fmtArgent(b - b / t) + ')']]; } }
+  ];
+  var memo = rappeler('pourcentage') || {};
+  modes.forEach(function (m, i) {
+    var va = memo[m.k] ? memo[m.k][0] : m.a, vb = memo[m.k] ? memo[m.k][1] : m.b;
+    var carte = document.createElement('div'); carte.className = 'carte';
+    var parts = T[m.k].split(/(\{a\}|\{b\})/);
+    carte.innerHTML = '<h2 style="margin-top:0;font-size:1.1rem">' + parts.map(function (p) {
+      if (p === '{a}') return '<input type="number" step="any" inputmode="decimal" data-i="' + i + '" data-k="a" value="' + va + '" style="width:6.5em;display:inline-block;padding:6px 8px;margin:0 2px">';
+      if (p === '{b}') return '<input type="number" step="any" inputmode="decimal" data-i="' + i + '" data-k="b" value="' + vb + '" style="width:7.5em;display:inline-block;padding:6px 8px;margin:0 2px">';
+      return echapper(p);
+    }).join('') + '</h2><div class="resultat" id="pc-r' + i + '"></div><p class="petit">' + T.formule + ' : <code>' + echapper(T[m.f]) + '</code></p>';
+    liste.appendChild(carte);
+  });
+  function calc() {
+    modes.forEach(function (m, i) {
+      var a = parseFloat(document.querySelector('[data-i="' + i + '"][data-k="a"]').value), b = parseFloat(document.querySelector('[data-i="' + i + '"][data-k="b"]').value);
+      var r = document.getElementById('pc-r' + i);
+      if (isNaN(a) || isNaN(b)) { r.innerHTML = ''; return; }
+      memo[m.k] = [a, b];
+      r.innerHTML = m.calc(a, b).map(function (l) { return '<div><span class="petit">' + l[0] + '</span><br><span class="grand-chiffre">' + l[1] + '</span></div>'; }).join('');
+    });
+    memoriser('pourcentage', memo);
+  }
+  liste.addEventListener('input', function () { calc(); mesurer('outil_utilise'); });
+  calc();
+})();
+
+</script>
+</body>
+</html>

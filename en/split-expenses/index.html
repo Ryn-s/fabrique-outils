@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Split expenses with friends — The Tool Factory</title>
+<meta name="description" content="Split the costs of a trip, a flat share or a night out for free, without an account: expenses, participants, balances and minimal settlement, shareable link.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/split-expenses/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/partage-des-frais/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/split-expenses/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Split expenses with friends", "sous_titre": "Who owes what to whom, in the fewest transfers. No account: a shareable link holds everything.", "description": "Split the costs of a trip, a flat share or a night out for free, without an account: expenses, participants, balances and minimal settlement, shareable link.", "participants": "Participants (one per line)", "depenses": "Expenses", "qui": "Paid by", "montant": "Amount", "quoi": "For what", "pour_qui": "Shared between", "tous": "everyone", "ajouter": "Add expense", "supprimer": "Remove", "soldes": "Balances", "a_recevoir": "should receive", "doit": "owes", "remboursements": "Settlement (fewest transfers)", "paie_a": "{de} pays {montant} to {a}", "total": "Total expenses", "part": "Share per person (if everything is shared by all)", "lien": "Copy shareable link", "lien_copie": "Link copied! It contains all the expenses.", "vide": "Add participants, then expenses.", "equilibre": "Everyone is settled up."};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/partage-des-frais/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Split expenses with friends</h1><p class="sous-titre">Who owes what to whom, in the fewest transfers. No account: a shareable link holds everything.</p><span class="requete">For people searching: « split expenses with friends free »</span>
+<div class="carte saisie">
+  <label for="p-participants">Participants (one per line)</label>
+  <textarea id="p-participants" rows="3" placeholder="Alice&#10;Bob&#10;Chloé"></textarea>
+  <h2>Expenses</h2>
+  <div class="ligne">
+    <div><label for="p-qui">Paid by</label><select id="p-qui"></select></div>
+    <div><label for="p-montant">Amount</label><input id="p-montant" type="number" step="0.01" min="0" inputmode="decimal"></div>
+  </div>
+  <label for="p-quoi">For what</label><input id="p-quoi">
+  <label>Shared between</label>
+  <div id="p-pour-qui" class="petit"></div>
+  <div class="actions"><button class="bouton" onclick="pAjouter()">Add expense</button></div>
+  <table id="p-liste"><tbody></tbody></table>
+</div>
+<div class="carte resultat" id="p-resultat"></div>
+<div class="actions ne-pas-imprimer">
+  <button class="bouton secondaire" onclick="pLien(this)">Copy shareable link</button>
+  <button class="bouton" onclick="imprimer()">Print / save as PDF</button>
+  <button class="bouton discret" onclick="pReinit()">Start over</button>
+</div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../random-group-generator/">Random group generator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('p-' + id); };
+  var etat = { participants: [], depenses: [] };
+  // État dans l'URL (#...) pour le lien à partager, sinon mémoire du navigateur.
+  function charger() {
+    if (location.hash.length > 1) {
+      try { etat = JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(1))))); return; } catch (e) {}
+    }
+    etat = rappeler('partage') || etat;
+  }
+  function sauver() { memoriser('partage', etat); }
+  function lireParticipants() {
+    etat.participants = el('participants').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+    var qui = el('qui'); var avant = qui.value; qui.innerHTML = '';
+    etat.participants.forEach(function (p) { var o = document.createElement('option'); o.textContent = p; o.value = p; qui.appendChild(o); });
+    if (etat.participants.indexOf(avant) >= 0) qui.value = avant;
+    el('pour-qui').innerHTML = etat.participants.map(function (p) { return '<label style="display:inline-block;font-weight:normal;margin:4px 12px 0 0"><input type="checkbox" class="p-part" value="' + echapper(p) + '" checked> ' + echapper(p) + '</label>'; }).join('');
+  }
+  window.pAjouter = function () {
+    var montant = parseFloat(el('montant').value); if (!montant || !etat.participants.length) return;
+    var entre = Array.prototype.map.call(document.querySelectorAll('.p-part:checked'), function (c) { return c.value; });
+    if (!entre.length) return;
+    etat.depenses.push({ qui: el('qui').value, montant: Math.round(montant * 100) / 100, quoi: el('quoi').value.trim(), entre: entre.length === etat.participants.length ? null : entre });
+    el('montant').value = ''; el('quoi').value = ''; mesurer('outil_utilise');
+    rendre();
+  };
+  window.pSupprimer = function (i) { etat.depenses.splice(i, 1); rendre(); };
+  window.pReinit = function () { etat = { participants: [], depenses: [] }; el('participants').value = ''; history.replaceState(null, '', location.pathname); lireParticipants(); rendre(); };
+  window.pLien = function (b) {
+    var h = btoa(unescape(encodeURIComponent(JSON.stringify(etat))));
+    var url = location.origin + location.pathname + '#' + h; history.replaceState(null, '', '#' + h);
+    copier(url, b); var r = el('resultat'); var p = document.createElement('p'); p.className = 'retour'; p.textContent = T.lien_copie; r.appendChild(p); setTimeout(function () { p.remove(); }, 2500);
+  };
+  function regler(soldes) {
+    // Soldes positifs = doit recevoir ; négatifs = doit payer. Glouton : plus gros créancier contre plus gros débiteur.
+    var cr = [], de = [];
+    Object.keys(soldes).forEach(function (p) { var s = Math.round(soldes[p] * 100); if (s > 0) cr.push({ p: p, s: s }); else if (s < 0) de.push({ p: p, s: -s }); });
+    cr.sort(function (a, b) { return b.s - a.s; }); de.sort(function (a, b) { return b.s - a.s; });
+    var virements = [], i = 0, j = 0;
+    while (i < cr.length && j < de.length) {
+      var m = Math.min(cr[i].s, de[j].s);
+      virements.push({ de: de[j].p, a: cr[i].p, montant: m / 100 });
+      cr[i].s -= m; de[j].s -= m; if (!cr[i].s) i++; if (!de[j].s) j++;
+    }
+    return virements;
+  }
+  function rendre() {
+    sauver();
+    var tb = el('liste').querySelector('tbody'); tb.innerHTML = '';
+    etat.depenses.forEach(function (d, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + echapper(d.qui) + '</td><td class="nombre">' + fmtArgent(d.montant, 'EUR') + '</td><td>' + echapper(d.quoi) + (d.entre ? ' <span class="petit">(' + d.entre.map(echapper).join(', ') + ')</span>' : '') + '</td><td><button class="bouton discret" onclick="pSupprimer(' + i + ')">' + T.supprimer + '</button></td>';
+      tb.appendChild(tr);
+    });
+    var r = el('resultat');
+    if (!etat.participants.length || !etat.depenses.length) { r.innerHTML = '<p class="petit">' + T.vide + '</p>'; return; }
+    var soldes = {}; etat.participants.forEach(function (p) { soldes[p] = 0; });
+    var total = 0;
+    etat.depenses.forEach(function (d) {
+      var entre = (d.entre || etat.participants).filter(function (p) { return soldes.hasOwnProperty(p); });
+      if (!entre.length) return;
+      total += d.montant; if (soldes.hasOwnProperty(d.qui)) soldes[d.qui] += d.montant;
+      entre.forEach(function (p) { soldes[p] -= d.montant / entre.length; });
+    });
+    var html = '<h2>' + T.soldes + '</h2><table>';
+    etat.participants.forEach(function (p) { var s = soldes[p]; html += '<tr><td>' + echapper(p) + '</td><td>' + (Math.abs(s) < 0.005 ? '—' : (s > 0 ? T.a_recevoir : T.doit)) + '</td><td class="nombre">' + (Math.abs(s) < 0.005 ? '' : fmtArgent(Math.abs(s), 'EUR')) + '</td></tr>'; });
+    html += '</table><p class="petit">' + T.total + ' : <strong>' + fmtArgent(total, 'EUR') + '</strong> · ' + T.part + ' : ' + fmtArgent(total / etat.participants.length, 'EUR') + '</p>';
+    var v = regler(soldes);
+    html += '<h2>' + T.remboursements + '</h2>' + (v.length ? '<ul>' + v.map(function (x) { return '<li>' + T.paie_a.replace('{de}', '<strong>' + echapper(x.de) + '</strong>').replace('{a}', '<strong>' + echapper(x.a) + '</strong>').replace('{montant}', '<strong>' + fmtArgent(x.montant, 'EUR') + '</strong>') + '</li>'; }).join('') + '</ul>' : '<p>' + T.equilibre + '</p>');
+    r.innerHTML = html;
+  }
+  charger();
+  el('participants').value = etat.participants.join('\n');
+  el('participants').addEventListener('input', function () { lireParticipants(); rendre(); });
+  lireParticipants(); rendre();
+})();
+
+</script>
+</body>
+</html>

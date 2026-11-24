@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Random group generator — The Tool Factory</title>
+<meta name="description" content="Make random groups for free: paste your names, choose the number of groups or the group size, and print. Also: pick a random name and shuffle an order.">
+<link rel="canonical" href="https://ryn-s.github.io/fabrique-outils/en/random-group-generator/">
+<link rel="alternate" hreflang="fr" href="https://ryn-s.github.io/fabrique-outils/fr/groupes-aleatoires/">
+<link rel="alternate" hreflang="en" href="https://ryn-s.github.io/fabrique-outils/en/random-group-generator/">
+<link rel="alternate" hreflang="x-default" href="https://ryn-s.github.io/fabrique-outils/">
+<link rel="stylesheet" href="../../style.css">
+<meta name="theme-color" content="#0f766e">
+<script>window.LANG="en";window.RACINE="../../";window.CONFIG={"mesure_url": "", "demande_url": "", "email_demandes": "", "url_publique": "https://ryn-s.github.io/fabrique-outils"};window.S={"slogan": "There's a tool for that.", "accroche": "Free tools, no account, no ads, built by agents. Missing one? Describe it: it goes live tomorrow.", "tous_les_outils": "All tools", "outil": "Tool", "categories": {"documents": "Documents and letters", "argent": "Money and math", "classe": "Classroom and games", "securite": "Security", "creation": "Creation", "travail": "Work"}, "repond_a": "For people searching:", "demander_titre": "Missing a tool?", "demander_texte": "Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.", "demander_placeholder": "For example: a tool to split a restaurant bill with tips", "email_placeholder": "Your email (optional, to be notified)", "envoyer": "Request this tool", "demande_merci": "Thanks! Your request is noted.", "demande_hors_ligne": "The site isn't connected yet: your request is kept in this browser and will be sent when the box opens.", "demande_vide": "First write what you're missing.", "imprimer": "Print / save as PDF", "copier": "Copy text", "copie": "Copied!", "telecharger": "Download", "reinitialiser": "Start over", "autres_outils": "Other tools", "mentions": "Legal notice", "confidentialite": "Privacy", "a_propos": "Built by agents", "a_propos_texte": "This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).", "autre_langue": "Français", "version_du": "Updated on", "page_mentions": "<h1>Legal notice</h1><p>Publisher: {societe_nom}, {societe_forme}, registered office {societe_siege}, France, company number (SIREN) {societe_siren}. Publication director: {directeur}.</p><p>Hosting: {hebergeur}.</p><p>Tools are provided free of charge, as is, without warranty. Generated documents (letters, receipts, invoices) are templates: check them before use; they are not legal or accounting advice.</p>", "page_confidentialite": "<h1>Privacy</h1><p>Tools run in your browser: what you type is not sent to our servers.</p><p>We count page views and tool uses anonymously (no content, no IP address kept beyond technical processing).</p><p>If you request a tool and leave your email, it is used only to tell you when the tool is live, then deleted. To erase it earlier: write to us (address in the legal notice).</p><p>No advertising cookies, no data resale.</p>", "erreur_404": "This page doesn't exist (yet). Tell us which tool you're missing."};window.T={"titre": "Random group generator", "sous_titre": "Paste your class or team list: balanced groups in one click, a random draw, or a random order.", "description": "Make random groups for free: paste your names, choose the number of groups or the group size, and print. Also: pick a random name and shuffle an order.", "noms": "Names (one per line)", "mode": "What do you need?", "par_nombre": "A number of groups", "par_taille": "Groups of a given size", "ordre": "A random order", "tirage": "Pick one name at random", "nombre": "Number of groups", "taille": "Group size", "generer": "Shuffle", "groupe": "Group", "tire": "Picked:", "vide": "Paste some names first.", "exemple": "Emma\nLiam\nOlivia\nNoah\nAva\nElijah\nSophia\nLucas\nMia\nMason\nIsabella\nEthan"};</script>
+</head>
+<body class="page-outil">
+<header class="entete">
+  <a class="marque" href="../../en/"><span class="logo" aria-hidden="true">⚒</span> The Tool Factory</a>
+  <nav class="nav">
+    <a href="../../en/">All tools</a>
+    <a href="../../fr/groupes-aleatoires/" lang="fr" hreflang="fr">Français</a>
+  </nav>
+</header>
+<main class="principal">
+<h1 class="titre-outil">Random group generator</h1><p class="sous-titre">Paste your class or team list: balanced groups in one click, a random draw, or a random order.</p><span class="requete">For people searching: « random group generator »</span>
+<div class="carte saisie">
+  <label for="g-noms">Names (one per line)</label><textarea id="g-noms" rows="8"></textarea>
+  <label for="g-mode">What do you need?</label>
+  <select id="g-mode">
+    <option value="nombre">A number of groups</option>
+    <option value="taille">Groups of a given size</option>
+    <option value="ordre">A random order</option>
+    <option value="tirage">Pick one name at random</option>
+  </select>
+  <div id="g-p-nombre"><label for="g-nombre">Number of groups</label><input id="g-nombre" type="number" min="2" max="50" value="4"></div>
+  <div id="g-p-taille" hidden><label for="g-taille">Group size</label><input id="g-taille" type="number" min="1" max="50" value="3"></div>
+  <div class="actions">
+    <button class="bouton" onclick="gGenerer()">Shuffle</button>
+    <button class="bouton secondaire" onclick="copier(gTexte(), this)">Copy text</button>
+    <button class="bouton" onclick="imprimer()">Print / save as PDF</button>
+  </div>
+</div>
+<div class="feuille" id="g-resultat"></div>
+
+</main>
+<section class="demander" id="demander">
+  <h2>Missing a tool?</h2>
+  <p>Describe it in one sentence. The factory's agents build one a day, and we'll tell you when it's live.</p>
+  <form id="form-demande" onsubmit="return envoyerDemande(event)">
+    <textarea id="demande-texte" rows="3" placeholder="For example: a tool to split a restaurant bill with tips" required></textarea>
+    <input id="demande-email" type="email" placeholder="Your email (optional, to be notified)">
+    <button type="submit" class="bouton">Request this tool</button>
+    <p id="demande-retour" class="retour" aria-live="polite"></p>
+  </form>
+</section>
+<section class="autres"><h2>Other tools</h2><ul><li><a href="../barcode-generator/">Barcode generator: EAN-13, EAN-8, UPC-A</a></li><li><a href="../invoice-generator/">Free invoice generator</a></li><li><a href="../timesheet/">Weekly timesheet calculator</a></li><li><a href="../printable-puzzles/">Printable puzzles: word search, maze, sudoku</a></li><li><a href="../resignation-letter/">Resignation letter template</a></li><li><a href="../password-generator/">Strong password generator</a></li><li><a href="../split-expenses/">Split expenses with friends</a></li><li><a href="../percentage-calculator/">Percentage calculator</a></li><li><a href="../rent-receipt/">Free rent receipt</a></li></ul></section>
+<footer class="pied">
+  <p><strong>Built by agents</strong> — This site is built and maintained by a team of AI agents run by one person. Every tool works in your browser; nothing you type is sent to a server, except tool requests and a few anonymous counters (number of uses, no content).</p>
+  <p><a href="../../en/mentions-legales/">Legal notice</a> · <a href="../../en/confidentialite/">Privacy</a> · Updated on 2026-11-24</p>
+</footer>
+<script src="../../commun.js"></script>
+<script>
+(function () {
+  var T = window.T, el = function (id) { return document.getElementById('g-' + id); }, dernier = [];
+  el('noms').value = rappeler('groupes-noms') || T.exemple;
+  el('mode').addEventListener('change', function () { el('p-nombre').hidden = el('mode').value !== 'nombre'; el('p-taille').hidden = el('mode').value !== 'taille'; gGenerer(); });
+  function noms() { return el('noms').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean); }
+  window.gGenerer = function () {
+    memoriser('groupes-noms', el('noms').value);
+    var l = melanger(noms()), mode = el('mode').value, r = el('resultat');
+    if (!l.length) { r.innerHTML = '<p class="petit">' + T.vide + '</p>'; dernier = []; return; }
+    var groupes = [];
+    if (mode === 'tirage') { dernier = [[l[0]]]; r.innerHTML = '<p class="grand-chiffre" style="text-align:center;color:#111">' + T.tire + ' ' + echapper(l[0]) + '</p>'; mesurer('outil_termine', mode); return; }
+    if (mode === 'ordre') { dernier = [l]; r.innerHTML = '<ol style="color:#111;columns:2">' + l.map(function (n) { return '<li>' + echapper(n) + '</li>'; }).join('') + '</ol>'; mesurer('outil_termine', mode); return; }
+    var n = mode === 'nombre' ? Math.max(1, Math.min(l.length, parseInt(el('nombre').value, 10) || 1)) : Math.max(1, Math.ceil(l.length / Math.max(1, parseInt(el('taille').value, 10) || 1)));
+    for (var i = 0; i < n; i++) groupes.push([]);
+    l.forEach(function (nom, i) { groupes[i % n].push(nom); });
+    dernier = groupes;
+    r.innerHTML = '<div class="grille" style="color:#111">' + groupes.map(function (g, i) { return '<div style="border:1px solid #ccc;border-radius:10px;padding:10px"><strong>' + T.groupe + ' ' + (i + 1) + '</strong><ul style="margin:6px 0 0;padding-left:18px">' + g.map(function (x) { return '<li>' + echapper(x) + '</li>'; }).join('') + '</ul></div>'; }).join('') + '</div>';
+    mesurer('outil_termine', mode);
+  };
+  window.gTexte = function () { return dernier.map(function (g, i) { return (dernier.length > 1 ? T.groupe + ' ' + (i + 1) + ' : ' : '') + g.join(', '); }).join('\n'); };
+  gGenerer();
+})();
+
+</script>
+</body>
+</html>
